@@ -1,0 +1,48 @@
+Last login: Sat Dec 18 15:36:23 on ttys001
+abhishekrajawat@Abhisheks-MacBook-Air ~ % mkdir Empwages
+abhishekrajawat@Abhisheks-MacBook-Air ~ % ls
+Applications		IdeaProjects		Public
+Desktop			Library			PycharmProjects
+Documents		Movies			eclipse
+Downloads		Music			eclipse-workspace
+Empwages		Pictures
+abhishekrajawat@Abhisheks-MacBook-Air ~ % rmdir Empwages
+abhishekrajawat@Abhisheks-MacBook-Air ~ % ls
+Applications		Library			PycharmProjects
+Desktop			Movies			eclipse
+Documents		Music			eclipse-workspace
+Downloads		Pictures
+IdeaProjects		Public
+abhishekrajawat@Abhisheks-MacBook-Air ~ % rmdir eclipse
+rmdir: eclipse: Directory not empty
+abhishekrajawat@Abhisheks-MacBook-Air ~ % rm eclipse
+rm: eclipse: is a directory
+abhishekrajawat@Abhisheks-MacBook-Air ~ % cd desktop
+abhishekrajawat@Abhisheks-MacBook-Air desktop % mkdir Employeewage
+abhishekrajawat@Abhisheks-MacBook-Air desktop % cd Employeewage
+abhishekrajawat@Abhisheks-MacBook-Air Employeewage % nano EmpwagesUC1.java
+
+  GNU nano 2.0.6            File: EmpwagesUC1.java                    Modified  
+
+public class Employeewages {
+    public static void main(String[] args) {
+        //constants
+        int IS_FULL_TIME = 1;
+        //Computation
+        double empcheck= Math.floor(Math.random() *10) % 2;
+        if (empcheck == IS_FULL_TIME)
+            System.out.println("Employee is present");
+        else
+            System.out.println("Employee is Absent");
+    }
+}
+
+
+
+
+
+
+
+
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Page ^K Cut Text  ^C Cur Pos
+^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
