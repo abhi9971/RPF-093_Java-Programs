@@ -18,7 +18,10 @@ public class Employee_Wage_Solution {
 		return daily_wage;
 	}
 	
-	public static int getPartTimeWage() {             // adding part time wager
+	public static int getPartTimeWage() { 
+		
+	// adding part time wager
+		
     	int partTimeWage = WagePerHr * PartThimeHr; 
         return partTimeWage;
     }
