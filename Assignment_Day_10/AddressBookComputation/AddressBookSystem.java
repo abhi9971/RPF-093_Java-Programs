@@ -12,13 +12,16 @@ public class AddressBookSystem {
 
     private static final ArrayList<ArrayList <String>> address_book = new ArrayList<>();
 
-    /*    Use Case 1: Create contacts in address book */
+    /* 
+    
+    Use Case 1: Create contacts in address book 
+    
+    */
 
     public void createContacts(ArrayList <String> contact){
 
         // Add contact details of person to address book
         AddressBookSystem.address_book.add(contact);
-
 
 
         // Print contact details of persons in address book
@@ -35,13 +38,11 @@ public class AddressBookSystem {
 
     }
 
-    /*
-
-    Use case 2: Add a new contact to address book
-
+    /* 
+    
+    Use case 2: Add a new contact to address book 
+    
     */
-
-
 
     public void addContact(){
 
@@ -56,7 +57,6 @@ public class AddressBookSystem {
     public ArrayList enterContactDetails(){
 
         ArrayList <String> contact = new ArrayList <String>();
-
 
 
         System.out.println("Enter the first name: ");
@@ -145,10 +145,10 @@ public class AddressBookSystem {
 
 
 
-    /*
-
-    Use case 3: Edit existing contact person using their name
-
+    /* 
+    
+    Use case 3: Edit existing contact person using their name 
+    
     */
 
     // Returns the index of contact details of a person in address book
@@ -189,9 +189,7 @@ public class AddressBookSystem {
 
     public void editExistingContact(){
 
-        System.out.println("Enter the name of the person whose details you "
-
-                + "want to be changed");
+        System.out.println("Enter the name of the person whose details you " + "want to be changed");
 
         Scanner sc = new Scanner(System.in);
 
@@ -211,19 +209,15 @@ public class AddressBookSystem {
 
     }
 
+/*  
 
+Use case 4: Delete an existing person contact using his name in address book 
 
-    /*
-
-    Use case 4: Delete an existing person contact using his name in address book
-
-    */
+*/
 
     public void deleteExistingContact(){
 
-        System.out.println("Enter the name of the person whose details you "
-
-                + "want to be deleted");
+        System.out.println("Enter the name of the person whose details you " + "want to be deleted");
 
         Scanner sc = new Scanner(System.in);
 
@@ -239,8 +233,6 @@ public class AddressBookSystem {
 
     }
 
-
-
     /*
 
     Use case 5 :Add multiple person to address book
@@ -249,9 +241,7 @@ public class AddressBookSystem {
 
     public void addMultiplePerson(){
 
-        System.out.println("Enter the number of persons whose details you want "
-
-                + "to add to the address book");
+        System.out.println("Enter the number of persons whose details you want " + "to add to the address book");
 
         Scanner sc = new Scanner(System.in);
 
