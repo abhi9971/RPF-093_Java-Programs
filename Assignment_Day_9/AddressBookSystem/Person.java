@@ -51,15 +51,18 @@ public class Person {
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+	
 	@Override
 	public String toString() {
 		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
 				+ ", state=" + state + ", email=" + email + ", zip=" + zip + ", phoneNumber=" + phoneNumber + "]";
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(address, city, email, firstName, lastName, phoneNumber, state, zip);
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
