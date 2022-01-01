@@ -14,7 +14,7 @@ public class AddressBookSystem {
 
     /*    Use Case 1: Create contacts in address book */
 
-    public void createContacts(ArrayList <String> contact){
+    public void createContacts(ArrayList <String> contact) {
 
         // Add contact details of person to address book
         AddressBookSystem.address_book.add(contact);
@@ -23,9 +23,10 @@ public class AddressBookSystem {
 
         // Print contact details of persons in address book
         
-        for (ArrayList <String> i: AddressBookSystem.address_book ){
+        for (ArrayList <String> i: AddressBookSystem.address_book ) {
 
-            for (String j: i){
+            for (String j: i)
+            {
 
                 System.out.println(j);
 
@@ -43,7 +44,7 @@ public class AddressBookSystem {
 
 
 
-    public void addContact(){
+    public void addContact() {
 
         ArrayList <String> contact = enterContactDetails();
 
@@ -53,7 +54,7 @@ public class AddressBookSystem {
 
     // Asks to enter all the details of person
 
-    public ArrayList enterContactDetails(){
+    public ArrayList enterContactDetails() {
 
         ArrayList <String> contact = new ArrayList <String>();
 
@@ -153,23 +154,23 @@ public class AddressBookSystem {
 
     // Returns the index of contact details of a person in address book
 
-    public int searchExistingContact(String search_pers){
+    public int searchExistingContact(String search_pers) {
 
         int indx = -1;
 
         int temp_indx = -1;
 
-        for (ArrayList <String> i:AddressBookSystem.address_book){
+        for (ArrayList <String> i:AddressBookSystem.address_book) {
 
             // find index of arraylist in which the given name is there
 
             temp_indx ++;
 
-            for (String j:i){
+            for (String j:i) {
 
                 // if name is found
 
-                if (j.equals(search_pers)){
+                if (j.equals(search_pers)) {
 
                     indx = temp_indx;
 
@@ -187,7 +188,7 @@ public class AddressBookSystem {
 
     // to change the contact details
 
-    public void editExistingContact(){
+    public void editExistingContact() {
 
         System.out.println("Enter the name of the person whose details you "
 
@@ -219,7 +220,7 @@ public class AddressBookSystem {
 
     */
 
-    public void deleteExistingContact(){
+    public void deleteExistingContact() {
 
         System.out.println("Enter the name of the person whose details you "
 
@@ -247,7 +248,7 @@ public class AddressBookSystem {
 
     */
 
-    public void addMultiplePerson(){
+    public void addMultiplePerson() {
 
         System.out.println("Enter the number of persons whose details you want "
 
@@ -257,7 +258,8 @@ public class AddressBookSystem {
 
         int no_of_person = sc.nextInt();
 
-        for (int i=1;i<=no_of_person;i++){
+        for (int i=1;i<=no_of_person;i++) 
+        {
 
             // call addition method for so many times
 
@@ -267,7 +269,7 @@ public class AddressBookSystem {
 
     }
 
-    public static void main(String []args){
+    public static void main(String []args) {
 
         System.out.println("Welcome to Address Book Program!");
 
