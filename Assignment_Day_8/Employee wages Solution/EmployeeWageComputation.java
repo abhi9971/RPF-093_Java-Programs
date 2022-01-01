@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-interface IEmployeeWageComputation
-{
+interface IEmployeeWageComputation {
+    
     public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs);
 
     public void calculateTotalWage();
@@ -10,8 +10,8 @@ interface IEmployeeWageComputation
     public int getTotalEmpWage(String companyName);
 }
 
-class CompanyEmpWage
-{
+class CompanyEmpWage {
+    
     // instance constants
     final String COMPANY_NAME;
     
@@ -25,8 +25,8 @@ class CompanyEmpWage
     int totalEmpWage;
 
     //parameterized constructor to get and set the values
-    CompanyEmpWage(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs)
-    {
+    CompanyEmpWage(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs) {
+        
         COMPANY_NAME = companyName;
         
         WAGE_PER_HR = wagePerHr;
@@ -38,14 +38,14 @@ class CompanyEmpWage
         totalEmpWage = 0;
     }
 
-    void setTotalEmployeeWage(int totalEmpWage)
-    {
+    void setTotalEmployeeWage(int totalEmpWage) {
+        
         this.totalEmpWage = totalEmpWage;
     }
 
     @Override
-    public String toString() 
-    {
+    public String toString() {
+        
         System.out.println("Details of " + COMPANY_NAME + " employee");
         
         System.out.println("-----------------------------------------------------");
@@ -70,16 +70,16 @@ class EmployeeWageComputation implements IEmployeeWageComputation {
 
     HashMap<String, Integer> totalEmpWages;
 
-    public EmployeeWageComputation() 
-    {
+    public EmployeeWageComputation() {
+        
         companies = new ArrayList<>();
         
         totalEmpWages = new HashMap<>();
     }
 
 
-    public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs) 
-    {
+    public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs) {
+        
         CompanyEmpWage company = new CompanyEmpWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
         
         companies.add(company);
@@ -87,13 +87,14 @@ class EmployeeWageComputation implements IEmployeeWageComputation {
         totalEmpWages.put(companyName, 0);
     }
 
-    int generateEmployeeType() 
-    {
+    int generateEmployeeType() {
+        
         return (int) (Math.random() * 100) % 3;
+        
     }
 
-    int getWorkingHrs(int empType) 
-    {
+    int getWorkingHrs(int empType) {
+        
         switch (empType)
         {
             case FULL_TIME:
@@ -110,8 +111,8 @@ class EmployeeWageComputation implements IEmployeeWageComputation {
         }
     }
 
-    public void calculateTotalWage()
-    {
+    public void calculateTotalWage() {
+        
         for (CompanyEmpWage company : companies)
         {
             int totalWage = calculateTotalWage(company);
@@ -122,8 +123,8 @@ class EmployeeWageComputation implements IEmployeeWageComputation {
         }
     }
 
-    int calculateTotalWage(CompanyEmpWage companyEmpWage)
-    {
+    int calculateTotalWage(CompanyEmpWage companyEmpWage) {
+        
         System.out.println("Computation of total wage of " + companyEmpWage.COMPANY_NAME + " employee");
         
         System.out.println("-----------------------------------------------------");
@@ -150,13 +151,14 @@ class EmployeeWageComputation implements IEmployeeWageComputation {
         return totalWage;
     }
 
-    public int getTotalEmpWage(String companyName) 
-    {
+    public int getTotalEmpWage(String companyName) {
+        
         return totalEmpWages.get(companyName);
+        
     }
 
-    public static void main(String args[]) 
-    {
+    public static void main(String args[]) {
+        
         EmployeeWageComputation employeeWageComputation = new EmployeeWageComputation();
         
         employeeWageComputation.addCompany("Microsoft", 4, 30, 100);
@@ -172,5 +174,6 @@ class EmployeeWageComputation implements IEmployeeWageComputation {
         int totalWage = employeeWageComputation.getTotalEmpWage(query);
         
         System.out.println("Total Employee Wage for " + query + " company is " + totalWage);
+        
     }
 }
