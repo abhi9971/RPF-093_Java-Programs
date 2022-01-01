@@ -12,8 +12,11 @@ import java.util.Scanner;
 public class JSONInventory {
 
     public static void main(String[] args) {
+        
         JSONParser parser = new JSONParser();
+        
         JSONArray listOfItem = new JSONArray();
+        
         JSONObject rice = new JSONObject();
         JSONObject pulse = new JSONObject();
         JSONObject wheat = new JSONObject();
