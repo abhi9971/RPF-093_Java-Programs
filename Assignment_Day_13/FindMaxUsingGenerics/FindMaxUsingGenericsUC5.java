@@ -10,28 +10,36 @@ public class FindMaxUsingGenericsUC5<T extends Comparable<T>> {
         this.val5 = val5;
     }
     public T maximumValue(){
+        
         return maximumValue(val1,val2,val3,val4,val5);
 
     }
 
     public static <T extends  Comparable <T>>  T maximumValue(T val1 , T val2, T val3 , T val4, T val5) {
+        
         T max = val1;
         if (val2.compareTo(max) > 0 ) {
             max = val2;
-        } if (val3.compareTo(max) > 0){
+        } 
+        if (val3.compareTo(max) > 0){
             max = val3;
-        }if (val4.compareTo(max) > 0 ){
-            max = val4;
-        }if (val5.compareTo(max) > 0){
-            max = val5;
-
         }
+        if (val4.compareTo(max) > 0 ){
+            max = val4;
+        }
+        if (val5.compareTo(max) > 0){
+            max = val5;
+        }
+        
         printMax(val1,val2,val3,max);
         return max;
+        
     }
 
     private static <T> void  printMax(T val1, T val2, T val3, T max) {
+        
         System.out.println("the maximum of" +val1+","+val2+" & " + val3+ " is :: " + max );
+        
     }
 
     public static void main(String[] args) {
