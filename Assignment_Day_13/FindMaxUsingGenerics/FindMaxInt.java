@@ -1,14 +1,18 @@
 public class FindMaxInt {
+    
     public int maxValue(int val1, int val2, int val3) {
+        
         int max = val1;
+        
         if (val2 > max) {
             max = val2;
-        } if (val3 > max) {
+        } 
+        if (val3 > max) {
             max = val3;
         }
+        
         return max;
     }
-
 
     public static void main(String[] args) {
         System.out.println("*******welcome to generics code tested By JUnit***** ");
