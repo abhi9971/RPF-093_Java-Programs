@@ -13,9 +13,7 @@ public class AddressBookSystem {
     private static final ArrayList<ArrayList <String>> address_book = new ArrayList<>();
 
     /* 
-    
     Use Case 1: Create contacts in address book 
-    
     */
 
     public void createContacts(ArrayList <String> contact){
