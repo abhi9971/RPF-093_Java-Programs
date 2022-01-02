@@ -53,5 +53,4 @@ public class MaximumTest <T extends Comparable <T>> {
         new MaximumTest(xStr, yStr, zStr).printMax();
 
     }
-
 }
