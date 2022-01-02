@@ -19,8 +19,6 @@ public class AddressBookSystem {
         // Add contact details of person to address book
         AddressBookSystem.address_book.add(contact);
 
-
-
         // Print contact details of persons in address book
         
         for (ArrayList <String> i: AddressBookSystem.address_book ) {
@@ -42,8 +40,6 @@ public class AddressBookSystem {
 
     */
 
-
-
     public void addContact() {
 
         ArrayList <String> contact = enterContactDetails();
@@ -58,8 +54,6 @@ public class AddressBookSystem {
 
         ArrayList <String> contact = new ArrayList <String>();
 
-
-
         System.out.println("Enter the first name: ");
 
         Scanner sc1 = new Scanner(System.in);
@@ -67,8 +61,7 @@ public class AddressBookSystem {
         String first_name = sc1.next();
 
         contact.add(first_name);
-
-
+        
 
         System.out.println("Enter the last name: ");
 
@@ -77,7 +70,6 @@ public class AddressBookSystem {
         String last_name = sc2.next();
 
         contact.add(last_name);
-
 
 
         System.out.println("Enter the address: ");
@@ -89,7 +81,6 @@ public class AddressBookSystem {
         contact.add(address);
 
 
-
         System.out.println("Enter the city name: ");
 
         Scanner sc4 = new Scanner(System.in);
@@ -97,7 +88,6 @@ public class AddressBookSystem {
         String city = sc4.next();
 
         contact.add(city);
-
 
 
         System.out.println("Enter the state's name: ");
@@ -109,7 +99,6 @@ public class AddressBookSystem {
         contact.add(state);
 
 
-
         System.out.println("Enter the zip: ");
 
         Scanner sc6 = new Scanner(System.in);
@@ -117,7 +106,6 @@ public class AddressBookSystem {
         String zip = sc6.next();
 
         contact.add(zip);
-
 
 
         System.out.println("Enter the phone number: ");
@@ -129,7 +117,6 @@ public class AddressBookSystem {
         contact.add(phone_num);
 
 
-
         System.out.println("Enter the email ID: ");
 
         Scanner sc8 = new Scanner(System.in);
@@ -139,12 +126,9 @@ public class AddressBookSystem {
         contact.add(email);
 
 
-
         return contact;
 
     }
-
-
 
     /*
 
@@ -190,9 +174,7 @@ public class AddressBookSystem {
 
     public void editExistingContact() {
 
-        System.out.println("Enter the name of the person whose details you "
-
-                + "want to be changed");
+        System.out.println("Enter the name of the person whose details you " + "want to be changed");
 
         Scanner sc = new Scanner(System.in);
 
@@ -212,8 +194,6 @@ public class AddressBookSystem {
 
     }
 
-
-
     /*
 
     Use case 4: Delete an existing person contact using his name in address book
@@ -222,9 +202,7 @@ public class AddressBookSystem {
 
     public void deleteExistingContact() {
 
-        System.out.println("Enter the name of the person whose details you "
-
-                + "want to be deleted");
+        System.out.println("Enter the name of the person whose details you " + "want to be deleted");
 
         Scanner sc = new Scanner(System.in);
 
@@ -240,8 +218,6 @@ public class AddressBookSystem {
 
     }
 
-
-
     /*
 
     Use case 5 :Add multiple person to address book
@@ -250,9 +226,7 @@ public class AddressBookSystem {
 
     public void addMultiplePerson() {
 
-        System.out.println("Enter the number of persons whose details you want "
-
-                + "to add to the address book");
+        System.out.println("Enter the number of persons whose details you want " + "to add to the address book");
 
         Scanner sc = new Scanner(System.in);
 
