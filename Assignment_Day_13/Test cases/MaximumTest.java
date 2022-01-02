@@ -23,14 +23,17 @@ public class MaximumTest <T extends Comparable <T>> {
 
             System.out.println(x);
 
-        } else if (y.compareTo(x) > 0 && y.compareTo(z) > 0) {
+        } 
+        
+        else if (y.compareTo(x) > 0 && y.compareTo(z) > 0) {
 
             System.out.println(y);
 
-        } else {
+        } 
+        else {
 
             System.out.println(z);
-
+            
         }
 
     }
@@ -42,7 +45,6 @@ public class MaximumTest <T extends Comparable <T>> {
         Float xFl = 3.3f, yFl = 4.4f, zFl =5.5f;
 
         String xStr = "Good", yStr = "Better", zStr = "Best";
-
 
         new MaximumTest(xInt, yInt, zInt).printMax();
 
