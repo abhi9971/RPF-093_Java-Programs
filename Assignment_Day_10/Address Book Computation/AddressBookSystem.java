@@ -264,6 +264,4 @@ Use case 4: Delete an existing person contact using his name in address book
         abs.addMultiplePerson();
 
     }
-
 }
-
