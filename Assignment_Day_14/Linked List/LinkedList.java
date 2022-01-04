@@ -127,11 +127,13 @@ public class LinkedList {
         }
 
         // Find the second last node
+        
         Node second_last = head;
         while (second_last.next.next != null)
             second_last = second_last.next;
 
         // Change next of second last
+        
         second_last.next = null;
 
         return;
@@ -156,7 +158,8 @@ public class LinkedList {
         }
         if (flag) {
             System.out.println("element is present at:" + i);
-        } else {
+        } 
+        else {
             System.out.println("element is absent");
         }
     }
