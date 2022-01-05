@@ -1,28 +1,46 @@
+import java.util.Scanner;
+
 public class Anagram {
-	
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter first string");
+		String string1 = sc.next();
+		System.out.println("Enter second string");
+		String string2 = sc.next();
 		
-		Utility u = new Utility();
+		Anagram anag1 = new Anagram();
+		anag1.anagram(string1,string2);
 		
-		//String str1 = "heart";
-		
-		//String str2 = "earth";
-		
-		//Scanner scan = new Scanner(System.in);
-		
-		System.out.println("Enter the String 1:");
-		
-		String str1 = u.inputString();
-		
-		//String str1 = scan.nextLine();
-		
-		System.out.println("Enter the String 2:");
-		
-		String str2 = u.inputString();
-		
-		//String str2 = scan.nextLine();
-		
-		u.anagram(str1,str2);
 	}
 
+	public void anagram(String one, String two) {
+		char newOne[] = one.toCharArray();
+		char newTwo[] = two.toCharArray();
+		
+		sortMethod(newOne);
+		sortMethod(newTwo);
+		
+		one = new String(newOne);
+		two = new String(newTwo);
+		
+		if(one.equals(two))
+			System.out.println(" They are anagrams");
+		else
+			System.out.println(" They are not anagrams");
+		
+	}
+	public static void sortMethod(char [] array) {
+		char temp;
+		
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array.length - i - 1; j++) {
+				if (array[j] > (array[j + 1])) {
+					temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+				}
+			}
+		}
+	
+	}
 }
