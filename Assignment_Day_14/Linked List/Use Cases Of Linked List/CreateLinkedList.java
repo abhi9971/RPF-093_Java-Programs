@@ -33,9 +33,7 @@ public class CreateLinkedList {
         }
     }
 
-
-    public static void printList()
-    {
+    public static void printList() {
         Node currNode = head;
 
         System.out.print("LinkedList: ");
