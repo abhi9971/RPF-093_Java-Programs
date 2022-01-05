@@ -32,5 +32,3 @@ public class FindMaxInt {
         System.out.println("the max vale of "+val1+" "+val2+" "+ val3+ " is :: "+ result);
     }
 }
-
-
