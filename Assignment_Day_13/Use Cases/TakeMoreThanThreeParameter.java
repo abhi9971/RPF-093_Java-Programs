@@ -41,4 +41,3 @@ public class TakeMoreThanThreeParameter<T extends Comparable<T>> {
 
     }
 }
-
