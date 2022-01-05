@@ -1,6 +1,6 @@
 public class FindMaxFloat {
     
-    public float maxValueFloat(float val1, float val2, float val3){
+    public float maxValueFloat(float val1, float val2, float val3) {
         
         float max = val1;
         
