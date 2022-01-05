@@ -5,23 +5,32 @@ public class LinkedList {
         LinkedList List = new LinkedList();
 
         List.addAtStart(70);
+        
         List.addAtStart(56);
+        
         List.insertAfter(List.head, 30);
+        
         List.search(30);
+        
         List.display();
     }
 
     static class Node {
+        
         int data;
+        
         Node next;
 
         public Node(int data) {
+            
             this.data = data;
+            
             this.next = null;
         }
     }
 
     public Node head = null;
+    
     public Node tail = null;
 
     public void addNode(int data) {
@@ -31,11 +40,13 @@ public class LinkedList {
         if (head == null) {
 
             head = newNode;
+            
             tail = newNode;
         }
         else {
 
             tail.next = newNode;
+            
             tail = newNode;
         }
     }
@@ -45,7 +56,9 @@ public class LinkedList {
         Node current = head;
 
         if (head == null) {
+            
             System.out.println("List is empty");
+            
             return;
         }
 
@@ -54,8 +67,10 @@ public class LinkedList {
         while (current != null) {
 
             System.out.print(current.data + "-> ");
+            
             current = current.next;
         }
+        
         System.out.println("null");
     }
 
@@ -70,12 +85,18 @@ public class LinkedList {
         Node newNode = new Node(newdata);
 
         if (head == null) {
+            
             head = newNode;
+            
             tail = newNode;
         }
+        
         else {
+            
             Node temp = head;
+            
             head = newNode;
+            
             head.next = temp;
         }
     }
@@ -83,30 +104,44 @@ public class LinkedList {
     public void addATEnd(int newdata) {
 
         Node newNode = new Node(newdata);
+        
         if (head == null) {
+            
             head = new Node(newdata);
+            
             return;
         }
+        
         newNode.next = null;
+        
         Node last = head;
 
-        while (last.next != null)
+        while (last.next != null) {
+            
             last = last.next;
+        
         last.next = newNode;
     }
 
     public void insertAfter(Node preNode, int newdata) {
+        
         if (preNode == null) {
+            
             System.out.println("invalid");
+            
             return;
         }
+        
         Node newNode = new Node(newdata);
+        
         newNode.next = preNode.next;
+        
         preNode.next = newNode;
 
     }
 
     void pop() {
+        
         if (this.head != null) {
 
             Node temp = this.head;
@@ -119,9 +154,12 @@ public class LinkedList {
     }
 
     void popLast() {
-        if (head == null)
+        
+        if (head == null) {
+            
             return;
-
+        }
+        
         if (head.next == null) {
             return;
         }
@@ -129,7 +167,9 @@ public class LinkedList {
         // Find the second last node
         
         Node second_last = head;
-        while (second_last.next.next != null)
+        
+        while (second_last.next.next != null) {
+            
             second_last = second_last.next;
 
         // Change next of second last
@@ -140,26 +180,41 @@ public class LinkedList {
     }
 
     public void search(Integer data) {
+        
         boolean flag = false;
+        
         int i = 1;
 
         Node current = head;
+        
         if (head == null) {
+            
             System.out.println("empty");
         }
+        
         while (current != null) {
+            
             if (current.data == data) {
+                
                 System.out.println("found");
+                
                 flag = true;
+                
                 break;
             }
+            
             i++;
+            
             current = current.next;
         }
+        
         if (flag) {
+            
             System.out.println("element is present at:" + i);
         } 
+        
         else {
+            
             System.out.println("element is absent");
         }
     }
