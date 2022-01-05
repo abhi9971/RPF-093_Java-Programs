@@ -1,51 +1,63 @@
+
+import java.util.Scanner;
+
 public class BinarySearchFile {
+	
+	public static void main(String[] args) {
 
-	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
 		
-		Utility u=new Utility();
+		String sentence = "hi,huys,whats,up";
 		
-		System.out.println("Enter the number of words yo want to insert: ");
+		String[] arrayOfString = sentence.toLowerCase().split(",");
 		
-		int arraySize1=u.inputInteger();
+		BinarySearchFile binary = new BinarySearchFile();
 		
-		String b[]=u.arrayString(arraySize1);
+		for(int i = 0; i<arrayOfString.length - 1; i++)   
+		{  
+			for (int j = i+1; j<arrayOfString.length; j++)   
+			{  
+				if(arrayOfString[i].compareTo(arrayOfString[j])>0)   
+				{  
+					
+				String temp = arrayOfString[i];  
+					
+				arrayOfString[i] = arrayOfString[j];  
+					
+				arrayOfString[j] = temp;  
+				}  
+			}  
+		}  
 		
-		u.sortSub(b, arraySize1);					//sorting the array
+		System.out.println("Enter word to search");
 		
-		System.out.println();	
+		String word = sc.next();
 		
-		System.out.println("The Sorted Order is: ");
-		
-		String str  = u.print1DStringArray(b);						//printing the sorted array
-		
-		System.out.println();
-		
-		u.wordsArrayFromStatement(str);
-		
-		System.out.println("Enter the file name:");
-		
-		String file = u.inputString();
-		
-		u.writeToFile(str,file);
-		
-		System.out.println("Enter Key: ");
-		
-		String key = u.inputString();
-		
-		int p=u.binarySearchString1(b,key);
-
-		if(p==-1) {
-			
-			System.out.println();
-			
-			System.out.println("Not Found");
-		}
-		
-		else {
-			
-			System.out.println();
-			
-			System.out.println("Element Found ");
-		}	
+		binary.binarySearchFile(arrayOfString, 0, arrayOfString.length, word);
 	}
+	
+	public void binarySearch(String[] array, int low, int high, String data) {
+
+        int mid = (low + high) / 2;
+
+        if (data.equals(array[mid])) {
+		
+                System.out.println(data+" word is found ");
+		
+                return;
+        }
+        
+        if (mid == low || mid == high) {
+		
+        	System.out.println(data+" word cant found  ");
+		
+        	return;
+        }
+
+        else if (data.compareTo(array[mid]) > 0)
+		
+                binarySearch(array, mid, high, data);
+        else
+                binarySearch(array, low, mid, data);
+}
 }
