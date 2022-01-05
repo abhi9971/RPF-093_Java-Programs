@@ -1,6 +1,6 @@
 public class FindMaxString {
     
-    public String maxString(String str1, String str2, String str3){
+    public String maxString(String str1, String str2, String str3) {
         
         String max = str1;
         
