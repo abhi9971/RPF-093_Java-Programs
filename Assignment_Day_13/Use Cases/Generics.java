@@ -30,5 +30,3 @@ public class Generics<T extends Comparable<T>> {
         generics.maximumValue(4.5f, 5.6f, 7.2f);
     }
 }
-
-
