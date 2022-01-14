@@ -140,7 +140,7 @@ class UserRegistration {
 
         String password = sc.nextLine();
 
-        boolean answer = Pattern.matches("[A-Z]+[a-z]+",password);
+        boolean answer = Pattern.matches("[A-Z]+[a-z]+[0-9]+",password);
 
         if (answer) {
 
